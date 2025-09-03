@@ -1,17 +1,36 @@
 #Kent Tran
-#9/2/2025
+#September 2, 2025
 #Lab 2 - Three Card Monte
 
 import check_input
 import random
 
-def get_users_bet(money): #shows user current money and gets a bet amount
+def get_users_bet(money): 
+    """shows user current money and gets a bet amount
+        Args:
+            money(integer): the amount of money user has to play with
+    
+        Returns:
+            returns the bet value
+
+        Raises:
+            Error: If the bet input is not an integer, or if it's out of range
+    """
     print("You have $" + str(money))
 
     bet = check_input.get_int_range("How much do you want to bet? ", 1, money)
     return bet
 
-def get_users_choice(): #prints the card and gets an input for a choice
+def get_users_choice(): 
+    """prints the card and gets an input for a choice
+        Args:
+    
+        Returns:
+            returns the users choice
+
+        Raises:
+            Error: If the choice is out of range
+    """
     print("+-----+ +-----+ +-----+")
     print("|     | |     | |     |")
     print("|  1  | |  2  | |  3  |")
@@ -22,6 +41,16 @@ def get_users_choice(): #prints the card and gets an input for a choice
     return choice
 
 def display_queen_loc(queen_loc):
+    """displays the queen location after the user makes a guess
+        Args:
+            queen_loc(int): location of the queen card
+    
+        Returns:
+            None
+
+        Raises:
+            Error: none
+    """
     print("+-----+ +-----+ +-----+")
     print("|     | |     | |     |")
 
@@ -36,6 +65,16 @@ def display_queen_loc(queen_loc):
     print("+-----+ +-----+ +-----+")
 
 def main():
+    """runs the game
+        Args:
+            none
+    
+        Returns:
+            none
+
+        Raises:
+            Error: none
+    """
     print("-Three Card Monte-")
     print("Find the Queen to double your bet!")
 
